@@ -1,1 +1,85 @@
+/* Variáveis para cores */
+:root {
+    --cor-fundo: #0A0A1A;
+    --cor-principal: #12122B;
+    --cor-secundaria: #2D2D44;
+    --cor-destaque: #8A2BE2; /* Roxo-azulado */
+    --cor-texto: #E6E6FA; /* Lavanda */
+    --cor-borda: #4B0082; /* Indigo */
+}
 
+/* Estilo geral do corpo da página */
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte mais moderna */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Caixa principal do jogo */
+.caixa-principal {
+    background-color: var(--cor-principal);
+    width: 90%;
+    max-width: 700px;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    border: 2px solid var(--cor-borda);
+}
+
+/* Título principal */
+h1 {
+    font-size: 2.5rem;
+    color: var(--cor-destaque);
+    text-shadow: 0 0 10px rgba(138, 43, 226, 0.7);
+    margin-bottom: 20px;
+}
+
+/* Botões de alternativa */
+.caixa-alternativas button {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto);
+    border: none;
+    border-radius: 10px;
+    padding: 15px 25px;
+    margin: 10px 0;
+    width: 100%;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    border: 1px solid var(--cor-secundaria);
+}
+
+.caixa-alternativas button:hover {
+    background-color: var(--cor-destaque);
+    color: var(--cor-principal);
+    border: 1px solid var(--cor-destaque);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(138, 43, 226, 0.4);
+}
+
+/* Estilo para a caixa de resultado */
+.caixa-resultado {
+    margin-top: 30px;
+}
+
+.texto-resultado {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* Efeito de transição nas perguntas */
+.caixa-perguntas {
+    margin-bottom: 25px;
+    font-size: 1.5rem;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.5s ease-in-out;
+}
